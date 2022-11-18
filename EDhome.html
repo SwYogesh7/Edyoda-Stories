@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EdYoda Stories</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    .navbar {
+      background-color: rgb(255, 255, 255);
+    }
+
+    .nav-link {
+      margin-left: 40px;
+    }
+
+    .navbar-brand {
+      margin-left: 100px;
+      font-weight: 600;
+      font-style: italic;
+    }
+
+    .form-inline {
+      margin-right: 100px;
+    }
+
+    .navbar-text {
+      margin-right: 20px;
+    }
+
+    .nav-btn {
+      background-color: #0084ff;
+      color: white;
+      border-radius: 17px;
+
+    }
+
+    .dropbtn {
+      background-color: transparent;
+      border: none;
+      position: relative;
+      display: inline-block;
+    }
+
+    .drop-menu {
+      display: none;
+      position: absolute;
+      background-color: rgb(255, 255, 255);
+      min-width: 135px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .drop-menu .drop-item {
+      display: block;
+      text-decoration: none;
+      padding: 12px 16px;
+      color: black;
+    }
+
+    .dropdown:hover .drop-menu {
+      display: block;
+    }
+
+    .filter {
+      margin-left: 220px;
+      margin-right: 100px;
+      margin-top: 10px;
+      font-size: 14px;
+
+    }
+
+    .filter-heading {
+      font-weight: 600;
+    }
+
+    .filter-category {
+      font-weight: 600;
+    }
+
+    .button {
+      padding: 6px 14px;
+      background-color: transparent;
+      color: #0084ff;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 15px;
+      margin: 5px;
+      cursor: pointer;
+      border: 1px solid #0084ff;
+      width: auto;
+    }
+
+    .fa {
+      margin-top: 20px;
+    }
+
+    .button:hover {
+      background-color: #0084ff;
+      color: white;
+    }
+
+    body {
+      background-color: #F3F8FF;
+    }
+
+    .card-deck {
+      margin-top: 18px;
+      width: 68%;
+      margin-left: 210px;
+    }
+
+    .card {
+      border-color: #0084ff5e;
+    }
+
+    .card-title {
+      text-align: left;
+      font-size: 18px;
+      font-weight: 600;
+
+    }
+
+    .card-text {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.43;
+      color: rgba(0, 0, 0, 0.6);
+      margin: 4px;
+    }
+
+    .card-img-top {
+      height: 176px;
+
+    }
+
+    .footer,
+    .text-reset {
+      background-color: #172146;
+      padding: 3%;
+      color: white;
+      font-size: 14px;
+      margin-top: 43px;
+    }
+
+    .footer a {
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      color: white;
+    }
+
+    .text-uppercase {
+      font-weight: 600;
+      color: #a5a5da;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">EDYODA<span style="display: block; color: black;">Stories</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav mr-auto">
+          <!-- <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: black">
+            Explore Categories
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li> -->
+          <li class="dropdown">
+            <button class="dropbtn">Explore Categories</button>
+            <div class="drop-menu">
+              <a class="drop-item" href="#">Action</a>
+              <a class="drop-item" href="#">Action</a>
+              <a class="drop-item" href="#">Action</a>
+            </div>
+          </li>
+        </ul>
+        <span class="navbar-text" style="color: rgba(0, 0, 0, 0.7);">
+          EdYoda is free learning and knowledge <span style="display: block;"></span> sharing platform for techies
+
+        </span>
+        <form class="form-inline my-2 my-lg-0">
+          <button class="btn my-2 my-sm-0 nav-btn" type="submit">Go To Main Website</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <!-- filter -->
+  <div class="filter">
+    <h3 class="filter-heading">Trending Posts</h3>
+    <p class="filter-category"><i style="font-size:24px; color: #0084ff;" class="fa">&#xf0b0;</i> Filter by Category</p>
+    <button class="button button5">All</button>
+    <button class="button button5">Artificial Intelligence</button>
+    <button class="button button5">Cloud Computing</button>
+    <button class="button button5">DevOps</button>
+    <button class="button button5">Programming Languages</button>
+    <button class="button button5">Mobile Application Development</button>
+    <button class="button button5">Technology and Tools</button>
+    <button class="button button5">Get a Job in a Tech Company</button>
+    <button class="button button5">Others</button>
+  </div>
+
+  <!-- body -->
+  <!-- 1st row -->
+  <div class="card-deck">
+    <div class="card">
+      <img class="card-img-top"
+        src="https://edyoda.s3.amazonaws.com/media/blog-images/learn_machine_learning_courses_online.png"
+        alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Introduction To A Machine Learning Online Course</h5>
+        <p class="card-text">We have had an insight into Artificial Intelligence. Well, one of its subfields is machine
+          learning and this introduction will
+          help you get a fair idea of what a machine learning online course holds. </p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="https://edyoda.s3.amazonaws.com/media/blog-images/6.png" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">LAMP Stack Vs MEAN stack: Choosing the right platform </h5>
+        <p class="card-text">In today’s dynamic world, rapid web application development with a smooth user interface
+          that can adapt to specific features is
+          the main business requirement.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="https://edyoda.s3.amazonaws.com/media/blog-images/4.png" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Impact of Cloud Computing in various industries</h5>
+        <p class="card-text">Cloud computing has been rapidly gaining pace in the world of information technology. It
+          has been observed that over 90% of
+          global enterprises are using cloud technology as part of their business. </p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+  </div>
+  <!-- 2nd row -->
+  <div class="card-deck">
+    <div class="card">
+      <img class="card-img-top" src="https://edyoda.s3.amazonaws.com/media/blog-images/5.png" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Cyber Security: Analysis of the digital world</h5>
+        <p class="card-text">When computers were standalone devices, security was a minimal concern. Mainframes had
+          their
+          own protected facilities. </p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="https://edyoda.s3.amazonaws.com/media/blog-images/7.png" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Importance of Data Backup and Recovery in the IT industry</h5>
+        <p class="card-text">A business must always introspect the areas where they lack in order to bring about a
+          positive change
+          in the work environment. </p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top"
+        src="https://edyoda.s3.amazonaws.com/media/blog-images/automation-testing-an-overview-2.png"
+        alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">What is Web Scraping?</h5>
+        <p class="card-text">Simply put, web scraping is one of the tools developers use to gather and analyze
+          information from the Internet.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+  </div>
+  <!-- 3rd row -->
+  <div class="card-deck">
+    <div class="card">
+      <img class="card-img-top" src="https://edyoda.s3.amazonaws.com/media/blog-images/what_is_isa_blog_1.png"
+        alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">What is Income Share Agreement?</h5>
+        <p class="card-text">The term Income Share Agreement has been around for a long time since 1955 to be precise.
+          Surprised, eh? It was first introduced by Milton Friedman,
+          an American economist, and statistician who strongly believed in “free-market capitalism”.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="https://edyoda.s3.amazonaws.com/media/blog-images/practical_machine_learning_1.png"
+        alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Practical Machine Learning with Python and Keras</h5>
+        <p class="card-text">Machine learning is a field of artificial intelligence that uses statistical techniques to
+          give computer systems the ability to “learn”
+          (e.g., progressively improve performance on a specific task) from data.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="https://edyoda.s3.amazonaws.com/media/blog-images/MicrosoftTeams-image_1.png"
+        alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">All about AITEST and how to avail rewards up to INR 1 Crore</h5>
+        <p class="card-text">Ever since 2019, after a solid hit from the falling rate of economic growth, the job market
+          seems to be challenging. </p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+  </div>
+  <!-- 4th row -->
+  <div class="card-deck">
+    <div class="card">
+      <img class="card-img-top"
+        src="https://edyoda.s3.amazonaws.com/media/blog-images/EdYoda_Admission_Test_Image_small.png"
+        alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Your Guide to EdYoda Admission Test</h5>
+        <p class="card-text">Ever since 2019, after a solid hit from the falling rate of economic growth, the job market
+          seems to be challenging.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="https://edyoda.s3.amazonaws.com/media/blog-images/3.png" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">React Native Vs Flutter: Breaking the confusion</h5>
+        <p class="card-text">The two biggest social platforms have created a buzz in the application development
+          industry. React Native by Facebook and Flutter by Google are the latest two cross-platforms.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="https://edyoda.s3.amazonaws.com/media/blog-images/react-native-vs-flutter.png"
+        alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Challenges of Machine Learning in Big Data Analytics</h5>
+        <p class="card-text">Machine Learning is a subset of artificial intelligence which is an important part of
+          computer science. The revolution of Big Data promises to transform the way we work.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-lg-start bg-light text-muted">
+
+
+    <section class="footer">
+      <div class="container text-md-start mt-5">
+
+        <div class="row mt-3">
+
+          <div class="col-md-3 col-lg-4 col-xl-2 mx-auto mb-4">
+
+            <h6 class="text-uppercase fw-bold mb-4">
+              <i class="fas fa-gem me-3"></i>Edyoda
+            </h6>
+            <p>
+              <a href="#!" class="text-reset">About Us</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Careers</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Contact Us</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Terms of Use</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Privacy Policy</a>
+            </p>
+          </div>
+
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+            <h6 class="text-uppercase fw-bold mb-4">
+              Resources
+            </h6>
+            <p>
+              <a href="#!" class="text-reset">Learning Paths</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Courses</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Learning Videos</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Educators</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">EdYoda Stories</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">University</a>
+            </p>
+          </div>
+
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+            <h6 class="text-uppercase fw-bold mb-4">
+              Quick links
+            </h6>
+            <p>
+              <a href="#!" class="text-reset">Learn and Earn</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Become a Learning-Enabler</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Tips for Learning-Enabler</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Request New Topic</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Certification</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Affiliate Program</a>
+            </p>
+          </div>
+
+
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+            <h6 class="text-uppercase fw-bold mb-4">Connect</h6>
+            <p>2nd Floor #188, Survey No. - 123/1,
+              Incubes Building Next to McDonalds,
+              ITPL Main Rd, Brookefield,
+              Bengaluru, Karnataka-560037,
+              India</p>
+            <p>
+              <i class="fa fa-envelope me-3"></i>
+              hello@edyoda.com
+            </p>
+            <p><i class="fa fa-facebook me-3 fa-footer"></i><i class="fa fa-linkedin me-3"></i>
+              <i class="fa fa-twitter me-3"></i><i class="fa fa-instagram me-3"></i>
+            </p>
+            <p>© 2022<span style="display: block;"></span>
+              zekeLabs Technologies Private Limited</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </footer>
+
+
+</body>
+
+</html>
